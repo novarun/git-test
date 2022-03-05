@@ -7,11 +7,11 @@ pipeline {
                 timeout(time: 1, unit: 'MINUTES') 
             }
             steps {
-                input('Do you want to proceed?')
+                input('Do you want to abort?')
             }
         }
 
-        stage('If Proceed is clicked') {
+        stage('If ABORT is clicked') {
             steps {
                 print('hello')
             }
