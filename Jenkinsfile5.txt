@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Input') {
             options {
-                timeout(time: 1, unit: 'MINUTES') 
+                timeout(time: 15, unit: 'SECONDS') 
             }
             steps {
                 input('Do you want to abort?')
