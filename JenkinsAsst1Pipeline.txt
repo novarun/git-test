@@ -1,0 +1,26 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Create Directory') {
+            steps {
+                mkdir JenkinsAssignment1
+            }
+        }
+        stage('Enter Directory') {
+            steps {
+                cd JenkinsAssignment1
+            }
+        }
+        stage('Git Init') {
+            steps {
+                git init
+            }
+        }
+        stage('Git Pull') {
+            steps {
+                git pull https://github.com/novarun/GitAssignments5.git
+            }
+        }
+    }
+}
