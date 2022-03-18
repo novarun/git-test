@@ -2,11 +2,11 @@ pipeline {
     agent any
 
     stages {
-        stage('Remove Directory') {
-            steps {
-                sh('rm -rf rm -rf GitAssignments5')
-            }
-        }
+        //stage('Remove Directory') {
+        //    steps {
+        //        sh('rm -rf rm -rf GitAssignments5')
+        //    }
+        //}
         //stage('Enter Directory and Clone') {
         //    steps {
         //        sh('cd JenkinsAssignment1')
@@ -22,7 +22,7 @@ pipeline {
         stage('Git Pull') {
             steps {
                 //git pull credentialsId: 'novarun', url: 'https://github.com/novarun/GitAssignments5.git'
-                sh('git clone https://github.com/novarun/GitAssignments5.git')
+                sh('git pull https://github.com/novarun/GitAssignments5.git & cd GitAssignments5')
            }
         }
     }
