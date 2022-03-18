@@ -22,7 +22,8 @@ pipeline {
         stage('Git Pull') {
             steps {
                 //git pull credentialsId: 'novarun', url: 'https://github.com/novarun/GitAssignments5.git'
-                sh('git pull https://github.com/novarun/GitAssignments5.git & cd GitAssignments5')
+                //sh('git pull https://github.com/novarun/GitAssignments5.git & cd GitAssignments5')
+                git pull branch: 'develop', url: 'https://github.com/novarun/GitAssignments5.git'
            }
         }
     }
