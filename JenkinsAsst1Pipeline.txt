@@ -2,28 +2,28 @@ pipeline {
     agent any
 
     stages {
-        stage('Create Directory') {
-            steps {
-                sh('mkdir JenkinsAssignment1')
-            }
-        }
-        stage('Enter Directory and Clone') {
-            steps {
-                sh('cd JenkinsAssignment1')
-                sh('git init')
-                sh('git clone https://github.com/novarun/GitAssignments5.git')
-            }
-        }
+        //stage('Create Directory') {
+        //    steps {
+        //        sh('mkdir JenkinsAssignment1')
+        //    }
+        //}
+        //stage('Enter Directory and Clone') {
+        //    steps {
+        //        sh('cd JenkinsAssignment1')
+        //        sh('git init')
+        //        sh('git clone https://github.com/novarun/GitAssignments5.git')
+        //    }
+        //}
        // stage('Git Init') {
        //     steps {
        //         sh('git init')
        //     }
        // }
-       // stage('Git Pull') {
-       //     steps {
-       //         //git pull credentialsId: 'novarun', url: 'https://github.com/novarun/GitAssignments5.git'
-       //         sh('git clone https://github.com/novarun/GitAssignments5.git')
-       //    }
-       // }
+        stage('Git Pull') {
+            steps {
+                //git pull credentialsId: 'novarun', url: 'https://github.com/novarun/GitAssignments5.git'
+                sh('git pull https://github.com/novarun/GitAssignments5.git')
+           }
+        }
     }
 }
