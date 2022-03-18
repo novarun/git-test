@@ -20,7 +20,7 @@ pipeline {
         stage('Git Pull') {
             steps {
                 //git pull credentialsId: 'novarun', url: 'https://github.com/novarun/GitAssignments5.git'
-                sh('git pull https://github.com/novarun/GitAssignments5.git')
+                sh('git clone https://github.com/novarun/GitAssignments5.git')
             }
         }
     }
